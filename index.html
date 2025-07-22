@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -26,17 +28,26 @@
   <header class="fixed w-full bg-black bg-opacity-90 text-white shadow z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold">Zensys</h1>
-      <nav class="space-x-6 hidden md:block">
+      <nav class="space-x-6 hidden md:flex">
         <a href="#services" class="hover:text-blue-400">Services</a>
         <a href="#case-studies" class="hover:text-blue-400">Case Studies</a>
         <a href="#about" class="hover:text-blue-400">About</a>
         <a href="#contact" class="hover:text-blue-400">Contact</a>
       </nav>
+      <button id="menu-toggle" class="md:hidden text-white text-xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-95 p-4 space-y-4">
+      <a href="#services" class="block">Services</a>
+      <a href="#case-studies" class="block">Case Studies</a>
+      <a href="#about" class="block">About</a>
+      <a href="#contact" class="block">Contact</a>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="pt-32 text-center px-4">
+  <section class="pt-32 text-center px-4" data-aos="fade-up">
     <h2 class="text-5xl font-extrabold gradient-text mb-4">Secure. Scale. Succeed.</h2>
     <p class="text-lg max-w-2xl mx-auto">Cybersecurity, Digital Marketing, and Recruitment — Tailored for Your Growth.</p>
     <div class="mt-6 flex justify-center gap-4">
@@ -46,7 +57,7 @@
   </section>
 
   <!-- Services -->
-  <section id="services" class="py-20 bg-[#0f172a]">
+  <section id="services" class="py-20 bg-[#0f172a]" data-aos="fade-up">
     <div class="max-w-6xl mx-auto px-4">
       <h3 class="text-3xl font-bold text-center mb-12">Our Services</h3>
       <div class="grid md:grid-cols-3 gap-10">
@@ -82,7 +93,7 @@
   </section>
 
   <!-- Case Studies -->
-  <section id="case-studies" class="py-20">
+  <section id="case-studies" class="py-20" data-aos="fade-up">
     <div class="max-w-6xl mx-auto px-4">
       <h3 class="text-3xl font-bold text-center mb-12">Case Studies</h3>
       <div class="grid md:grid-cols-2 gap-10">
@@ -99,7 +110,7 @@
   </section>
 
   <!-- About -->
-  <section id="about" class="py-20 bg-[#0f172a]">
+  <section id="about" class="py-20 bg-[#0f172a]" data-aos="fade-up">
     <div class="max-w-6xl mx-auto px-4 text-center">
       <h3 class="text-3xl font-bold mb-6">About Us</h3>
       <p class="max-w-2xl mx-auto mb-6">Zensys Technologies was founded with a vision to help modern businesses secure their operations, scale their reach, and build powerful teams. We believe in transparency, results-first service, and lasting relationships.</p>
@@ -112,13 +123,13 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20">
+  <section id="contact" class="py-20" data-aos="fade-up">
     <div class="max-w-4xl mx-auto px-4">
       <h3 class="text-3xl font-bold text-center mb-10">Contact Us</h3>
-      <form class="bg-[#1e293b] p-6 rounded-xl space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full p-3 rounded bg-[#334155] text-white">
-        <input type="email" placeholder="Your Email" class="w-full p-3 rounded bg-[#334155] text-white">
-        <textarea placeholder="Your Message" class="w-full p-3 rounded bg-[#334155] text-white" rows="5"></textarea>
+      <form action="https://formspree.io/f/moqgyybb" method="POST" class="bg-[#1e293b] p-6 rounded-xl space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-[#334155] text-white">
+        <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded bg-[#334155] text-white">
+        <textarea name="message" placeholder="Your Message" required class="w-full p-3 rounded bg-[#334155] text-white" rows="5"></textarea>
         <button type="submit" class="px-6 py-3 bg-blue-600 rounded hover:bg-blue-700">Send Message</button>
       </form>
     </div>
@@ -130,6 +141,16 @@
     <p class="mt-2 text-sm">Let’s build your growth engine.</p>
   </footer>
 
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Initialize AOS animations
+    AOS.init();
+  </script>
+
 </body>
 </html>
-
