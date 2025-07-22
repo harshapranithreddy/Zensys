@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zensys Technologies</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0a0a;
+      color: white;
+    }
+    .gradient-text {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+
+  <!-- Header -->
+  <header class="fixed w-full bg-black bg-opacity-90 text-white shadow z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Zensys</h1>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#services" class="hover:text-blue-400">Services</a>
+        <a href="#case-studies" class="hover:text-blue-400">Case Studies</a>
+        <a href="#about" class="hover:text-blue-400">About</a>
+        <a href="#contact" class="hover:text-blue-400">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="pt-32 text-center px-4">
+    <h2 class="text-5xl font-extrabold gradient-text mb-4">Secure. Scale. Succeed.</h2>
+    <p class="text-lg max-w-2xl mx-auto">Cybersecurity, Digital Marketing, and Recruitment — Tailored for Your Growth.</p>
+    <div class="mt-6 flex justify-center gap-4">
+      <a href="#contact" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold">Book a Free Strategy Call</a>
+      <a href="#contact" class="px-6 py-3 border border-white hover:border-blue-400 rounded-lg font-semibold">Get a Website Audit</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-[#0f172a]">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-12">Our Services</h3>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-[#1e293b] p-6 rounded-xl hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-2">Cybersecurity</h4>
+          <ul class="text-sm list-disc list-inside">
+            <li>Vulnerability assessments</li>
+            <li>Malware cleanup</li>
+            <li>Security monitoring</li>
+            <li>Compliance readiness</li>
+          </ul>
+        </div>
+        <div class="bg-[#1e293b] p-6 rounded-xl hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-2">Digital Marketing</h4>
+          <ul class="text-sm list-disc list-inside">
+            <li>SEO audit & optimization</li>
+            <li>Keyword research & planning</li>
+            <li>Blog & content strategy</li>
+            <li>Performance reporting</li>
+          </ul>
+        </div>
+        <div class="bg-[#1e293b] p-6 rounded-xl hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-2">Recruitment</h4>
+          <ul class="text-sm list-disc list-inside">
+            <li>Tech & digital hiring</li>
+            <li>Intern sourcing</li>
+            <li>Onboarding assistance</li>
+            <li>Role-based filtering</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section id="case-studies" class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-12">Case Studies</h3>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="bg-[#1e293b] p-6 rounded-xl">
+          <h4 class="text-lg font-semibold">Local Business SEO Boost</h4>
+          <p class="text-sm mt-2">We helped a local fitness studio move from Page 5 to Page 1 on Google within 3 months using targeted content and keyword strategies.</p>
+        </div>
+        <div class="bg-[#1e293b] p-6 rounded-xl">
+          <h4 class="text-lg font-semibold">Rapid Developer Hiring</h4>
+          <p class="text-sm mt-2">A startup needed two full-stack developers fast. We filled both roles in under 2 weeks through our talent sourcing system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-[#0f172a]">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-6">About Us</h3>
+      <p class="max-w-2xl mx-auto mb-6">Zensys Technologies was founded with a vision to help modern businesses secure their operations, scale their reach, and build powerful teams. We believe in transparency, results-first service, and lasting relationships.</p>
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <div class="bg-[#1e293b] p-4 rounded-lg">👨‍💼 Founder: Rahul Jain</div>
+        <div class="bg-[#1e293b] p-4 rounded-lg">🧠 CTO: Meera Iyer</div>
+        <div class="bg-[#1e293b] p-4 rounded-lg">🤝 Partnerships: Arjun Rao</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Contact Us</h3>
+      <form class="bg-[#1e293b] p-6 rounded-xl space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 rounded bg-[#334155] text-white">
+        <input type="email" placeholder="Your Email" class="w-full p-3 rounded bg-[#334155] text-white">
+        <textarea placeholder="Your Message" class="w-full p-3 rounded bg-[#334155] text-white" rows="5"></textarea>
+        <button type="submit" class="px-6 py-3 bg-blue-600 rounded hover:bg-blue-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8 text-center">
+    <p>&copy; 2025 Zensys Technologies. All rights reserved.</p>
+    <p class="mt-2 text-sm">Let’s build your growth engine.</p>
+  </footer>
+
+</body>
+</html>
 
